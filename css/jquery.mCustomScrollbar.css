@@ -1,0 +1,169 @@
+/*
+== malihu jquery custom scrollbar plugin ==
+Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller
+*/
+
+
+
+/*
+CONTENTS: 
+	1. BASIC STYLE - Plugin's basic/essential CSS properties (normally, should not be edited). 
+	2. VERTICAL SCROLLBAR - Positioning and dimensions of vertical scrollbar. 
+	3. HORIZONTAL SCROLLBAR - Positioning and dimensions of horizontal scrollbar.
+	4. VERTICAL AND HORIZONTAL SCROLLBARS - Positioning and dimensions of 2-axis scrollbars. 
+	5. TRANSITIONS - CSS3 transitions for hover events, auto-expanded and auto-hidden scrollbars. 
+	6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS 
+		6.1 THEMES - Scrollbar colors, opacity, dimensions, backgrounds etc. via ready-to-use themes.
+*/
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+1. BASIC STYLE  
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	.mCustomScrollbar{ -ms-touch-action: pinch-zoom; touch-action: pinch-zoom; /* direct pointer events to js */ }
+	.mCustomScrollbar.mCS_no_scrollbar, .mCustomScrollbar.mCS_touch_action{ -ms-touch-action: auto; touch-action: auto; }
+	
+	.mCustomScrollBox{ /* contains plugin's markup */
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		max-width: 100%;
+		outline: none;
+		direction: ltr;
+	}
+
+	.mCSB_container{ /* contains the original content */
+		overflow: hidden;
+		width: auto;
+		height: auto;
+		padding-right:15px;
+	}
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+2. VERTICAL SCROLLBAR 
+y-axis
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	
+
+	.mCSB_scrollTools{ /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */
+		position: absolute;
+		width: 16px;
+		height: auto;
+		left: auto;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	
+	
+
+	.mCSB_scrollTools .mCSB_draggerContainer{ /* contains the draggable element and dragger rail markup */
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0; 
+		height: auto;
+	}
+
+	
+
+	.mCSB_scrollTools .mCSB_draggerRail{
+		width: 2px;
+		height: 100%;
+		margin: 0 auto;
+		-webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;
+	}
+
+	
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+3. HORIZONTAL SCROLLBAR 
+x-axis
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+4. VERTICAL AND HORIZONTAL SCROLLBARS 
+yx-axis 
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+5. TRANSITIONS  
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS  
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	/* 
+	----------------------------------------
+	6.1 THEMES 
+	----------------------------------------
+	*/
+	
+	/* default theme ("light") */
+
+
+
+
+	.mCSB_scrollTools .mCSB_draggerRail{
+		background-color: #fff; background-color: rgba(225,225,225,0.5);
+		filter: "alpha(opacity=40)"; -ms-filter: "alpha(opacity=40)"; 
+	}
+
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+		background-color:white;
+		border-radius:15px;
+	}
+
+	
+
+
+	
+	
+	
+	
+	/* theme "rounded", "rounded-dark", "rounded-dots", "rounded-dots-dark" */
+	
+	.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail{ background-color: #fff; background-color: rgba(255,255,255,0.15); }
+	
+	.mCS-rounded.mCSB_scrollTools .mCSB_dragger, 
+	.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger, 
+	.mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger, 
+	.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger{ height: 59px; }
+	
+	.mCS-rounded.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+		width: 16px;
+		margin: 0 1px;
+		height:59px;
+		
+	}
+
+	
